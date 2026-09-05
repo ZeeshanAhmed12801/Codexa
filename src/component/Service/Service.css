@@ -1,0 +1,247 @@
+/* ===========================
+   SERVICES SECTION
+=========================== */
+
+.service-section {
+  background: #050816;
+  padding: 100px 20px;
+}
+
+.service-container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* ===========================
+   HEADING
+=========================== */
+
+.service-heading {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.service-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: #8b5cf6;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.service-title {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.service-title span {
+  background: linear-gradient(to right, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-description {
+  color: #9ca3af;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-top: 30px;
+}
+
+.service-line {
+  width: 80px;
+  height: 4px;
+  background: #8b5cf6;
+  border-radius: 50px;
+  margin: 30px auto 0;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.service-card {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 24px;
+  padding: 40px 35px;
+  transition: 0.35s;
+  min-height: 370px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: #8b5cf6;
+}
+
+.service-card h3 {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: #9ca3af;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.service-btn {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-btn:hover {
+  transform: translateX(6px);
+}
+
+/* ===========================
+   ICON COLORS
+=========================== */
+
+.text-violet-500 {
+  color: #8b5cf6;
+}
+
+.border-violet-500\/40 {
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.bg-violet-500\/10 {
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.text-green-500 {
+  color: #22c55e;
+}
+
+.border-green-500\/40 {
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.bg-green-500\/10 {
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.text-yellow-400 {
+  color: #facc15;
+}
+
+.border-yellow-400\/40 {
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+.bg-yellow-400\/10 {
+  background: rgba(250, 204, 21, 0.1);
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.border-blue-500\/40 {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.bg-blue-500\/10 {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.text-pink-500 {
+  color: #ec4899;
+}
+
+.border-pink-500\/40 {
+  border-color: rgba(236, 72, 153, 0.4);
+}
+
+.bg-pink-500\/10 {
+  background: rgba(236, 72, 153, 0.1);
+}
+
+.text-cyan-400 {
+  color: #22d3ee;
+}
+
+.border-cyan-400\/40 {
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
+.bg-cyan-400\/10 {
+  background: rgba(34, 211, 238, 0.1);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1024px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-title {
+    font-size: 40px;
+  }
+
+  .service-card {
+    max-width: 420px;
+    margin: auto;
+  }
+
+  .service-description {
+    font-size: 17px;
+  }
+}

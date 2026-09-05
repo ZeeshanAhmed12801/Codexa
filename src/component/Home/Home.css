@@ -1,0 +1,354 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050816;
+    font-family:Arial, Helvetica, sans-serif;
+    min-height:100%;
+    overflow-x:hidden;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    width:100%;
+    min-height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 7%;
+    background:
+      radial-gradient(circle at 75% 30%, rgba(37,99,235,.25), transparent 35%),
+      #050816;
+}
+
+.hero-left{
+    width:50%;
+}
+
+.sub-title{
+    color:#3b82f6;
+    letter-spacing:2px;
+    font-size:15px;
+    font-weight:600;
+}
+
+.hero-left h1{
+    font-size:70px;
+    line-height:1.1;
+    margin:25px 0;
+    font-weight:700;
+    color: white;
+}
+
+.hero-left span{
+    color:#3b82f6;
+}
+
+.hero-left p{
+    color:#b5b5b5;
+    font-size:20px;
+    line-height:1.8;
+    width:90%;
+    max-width:640px;
+}
+
+.hero-btn{
+    display:flex;
+    gap:20px;
+    margin-top:40px;
+}
+
+.btn-primary{
+    padding:16px 35px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:#fff;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+.btn-outline{
+    padding:16px 35px;
+    border:2px solid #2563eb;
+    border-radius:10px;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.btn-outline:hover{
+    background:#2563eb;
+}
+
+.hero-right{
+    width:55%;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.hero-right img{
+    width:100%;
+    max-width:760px;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:25px;
+}
+
+.blue{
+    background:#2563eb;
+}
+
+.green{
+    background:#16a34a;
+}
+
+.purple{
+    background:#9333ea;
+}
+
+.yellow{
+    background:#f59e0b;
+}
+
+.card h3{
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#b5b5b5;
+    font-size:14px;
+}
+
+/* ================= WHY CHOOSE ================= */
+
+.whyChoose{
+    width:90%;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:50px;
+    background:#111827;
+    padding:50px;
+    border-radius:20px;
+}
+
+.smallTitle{
+    color:#3b82f6;
+    letter-spacing:2px;
+    font-size:15px;
+}
+
+.leftSide h2{
+    color:#fff;
+    font-size:45px;
+    margin:20px 0;
+}
+
+.leftSide p{
+    color:#b5b5b5;
+    line-height:1.8;
+}
+
+.rightSide{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.service{
+    background:#1b2435;
+    padding:25px;
+    border-radius:15px;
+}
+
+.serviceIcon{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.service h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.service p{
+    color:#b5b5b5;
+    line-height:1.7;
+}
+
+/* ================= COUNTER ================= */
+
+.counterSection{
+    width:90%;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.counter{
+    background:#111827;
+    border-radius:15px;
+    padding:30px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.counterIcon{
+    font-size:40px;
+}
+
+.counter h2{
+    color:#fff;
+    font-size:35px;
+}
+
+.counter p{
+    color:#b5b5b5;
+    margin-top:5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:60px 6%;
+}
+
+.hero-left,
+.hero-right{
+    width:100%;
+}
+
+.hero-right{
+    margin-top:40px;
+}
+
+.hero-left h1{
+    font-size:52px;
+}
+
+.hero-left p{
+    width:100%;
+}
+
+.hero-btn{
+    justify-content:center;
+}
+
+.features{
+    grid-template-columns:1fr;
+}
+
+.whyChoose{
+    grid-template-columns:1fr;
+}
+
+.rightSide{
+    grid-template-columns:1fr;
+}
+
+.counterSection{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+    padding:50px 5%;
+}
+
+.hero-left h1{
+    font-size:48px;
+}
+
+.hero-left p{
+    font-size:18px;
+}
+
+.whyChoose{
+    padding:35px;
+    gap:30px;
+}
+
+.service{
+    padding:20px;
+}
+
+.card{
+    padding:20px;
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-left h1{
+    font-size:38px;
+}
+
+.hero-btn{
+    flex-direction:column;
+}
+
+.btn-primary,
+.btn-outline{
+    width:100%;
+}
+
+.counterSection{
+    grid-template-columns:1fr;
+}
+
+}
