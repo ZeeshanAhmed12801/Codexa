@@ -1,5 +1,6 @@
-import React from 'react';
-import './About.css';
+import React, { useEffect, useRef, useState } from "react";
+import "./About.css";
+
 import {
   FaCode,
   FaBolt,
@@ -19,6 +20,9 @@ import { SiTypescript, SiTailwindcss } from "react-icons/si";
 import aboutImg from "../../assets/about.png";
 
 function About() {
+  const [visible, setVisible] = useState(false);
+  const aboutRef = useRef(null);
+
   const features = [
     {
       icon: <FaCode />,
@@ -61,9 +65,32 @@ function About() {
     },
   ];
 
-  return (
-    <section className="about-section">
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
 
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={aboutRef}
+      id="about"
+      className={`about-section ${visible ? "show" : ""}`}
+    >
       {/* Background Effects */}
       <div className="about-glow about-glow-one"></div>
       <div className="about-glow about-glow-two"></div>
@@ -74,11 +101,13 @@ function About() {
 
         <div className="about-content">
 
-          <span className="about-subtitle">
-            ABOUT US
-          </span>
+          <div className="about-heading">
+            <span className="about-subtitle">
+              ABOUT US
+            </span>
 
-          <div className="about-line"></div>
+            <div className="about-line"></div>
+          </div>
 
           <h1>
             We Build Digital
@@ -95,14 +124,17 @@ function About() {
             businesses grow and stand out in the digital world.
           </p>
 
-
           {/* FEATURES */}
 
           <div className="about-features">
-
             {features.map((feature, index) => (
-              <div className="about-feature" key={index}>
-
+              <div
+                className="about-feature"
+                key={index}
+                style={{
+                  transitionDelay: `${index * 100}ms`,
+                }}
+              >
                 <div className="feature-icon">
                   {feature.icon}
                 </div>
@@ -110,20 +142,21 @@ function About() {
                 <span>
                   {feature.title}
                 </span>
-
               </div>
             ))}
-
           </div>
-
 
           {/* STATS */}
 
           <div className="about-stats">
-
             {stats.map((stat, index) => (
-              <div className="about-stat" key={index}>
-
+              <div
+                className="about-stat"
+                key={index}
+                style={{
+                  transitionDelay: `${index * 120}ms`,
+                }}
+              >
                 <div className="stat-icon">
                   {stat.icon}
                 </div>
@@ -135,22 +168,23 @@ function About() {
                 <p>
                   {stat.title}
                 </p>
-
               </div>
             ))}
-
           </div>
 
         </div>
-
 
         {/* ================= RIGHT CONTENT ================= */}
 
         <div className="about-visual">
 
-          {/* Main Image */}
+          {/* Image */}
 
           <div className="about-image-wrapper">
+
+            <div className="image-glow"></div>
+
+            <div className="image-border"></div>
 
             <img
               src={aboutImg}
@@ -159,7 +193,6 @@ function About() {
             />
 
           </div>
-
 
           {/* Technology Icons */}
 
@@ -186,7 +219,6 @@ function About() {
             </div>
 
           </div>
-
 
           {/* Mission Card */}
 
@@ -216,7 +248,6 @@ function About() {
         </div>
 
       </div>
-
     </section>
   );
 }
